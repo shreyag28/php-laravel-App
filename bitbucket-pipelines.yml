@@ -14,6 +14,8 @@ pipelines:
            - docker-php-ext-install pdo_mysql ctype bcmath zip
            - curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
            - apt -qy install npm
+           - composer update
+           - composer dump-autoload
            - composer install --no-interaction
            - npm install
            - ln -f -s .env.pipeline .env
