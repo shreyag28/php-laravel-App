@@ -1,0 +1,1 @@
+## This is a the Laravel MySQL Mood Tracker project
