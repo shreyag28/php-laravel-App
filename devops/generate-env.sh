@@ -3,7 +3,7 @@
 # loads your .env file stored inside AWS Systems Manager (Paramater).
 
 # aws paramater store name & region
-PARAMATER="laravel_env"
+PARAMATER="laraveldevops_env"
 REGION="us-east-1"
 
 # Get parameters and put it into .env file inside application root

@@ -1,1 +1,1 @@
-## This is a the Laravel MySQL Mood Tracker project
+## This is a Mood Tracker Application developed using Laravel and MySQL
