@@ -10,8 +10,7 @@ pipelines:
          script:
            # Build the project
            - apt -qy update
-           - apt -qy install curl git zip unzip
-           - docker-php-ext-install pdo_mysql ctype bcmath zip
+           - apt -qy install curl git zip unzip docker-php-ext-install pdo_mysql ctype bcmath
            - curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
            - apt -qy install npm
            - composer install --no-interaction
@@ -33,8 +32,7 @@ pipelines:
          script:
            # Build for production
            - apt -qy update
-           - apt -qy install curl git zip unzip
-           - docker-php-ext-install pdo_mysql ctype bcmath zip
+           - apt -qy install curl git zip unzip docker-php-ext-install pdo_mysql ctype bcmath
            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
            - apt -qy install npm
            - npm install
@@ -71,4 +69,4 @@ definitions:
        MYSQL_DATABASE: 'laravel'
        MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
        MYSQL_USER: 'laravel'
-       MYSQL_PASSWORD: 'secret'
+       MYSQL_PASSWORD: 'l@r@vel'
